@@ -1,0 +1,31 @@
+<h1>Отправить письмо</h1>
+
+<!--
+<form action="/emails" method="POST">
+  <p><label for="email[sender]">Отправитель</label></p>
+  <p><input type="text" name="email[sender]"></p>
+
+  <p><label for="email[recipient]">Получатель</label></p>
+  <p><input type="text" name="email[recipient]"></p>
+
+  <p><label for="email[subject]">Тема письма</label></p>
+  <p><input type="text" name="email[subject]"></p>
+
+  <p><label for="email[body]">Содержание</label></p>
+  <p><textarea name="email[body]" rows=10></textarea></p>
+
+  <p><input type="submit" value="Отправить"></p>
+</form>
+-->
+
+<%= form_with model: @email do |form| %>
+  <p><%= form.label :sender, 'Адрес отправителя' %></p>
+  <p><%= form.text_field :sender, type: "email" %></p>
+  <p><%= form.label :recipient, 'Адрес получателя' %></p>
+  <p><%= form.text_field :recipient, type: "email" %></p>
+  <p><%= form.label :subject, 'Тема' %></p>
+  <p><%= form.text_field :subject %></p>
+  <p><%= form.label :body, 'Текст письма' %></p>
+  <p><%= form.text_area :body, rows: 5%></p>
+  <p><%= form.submit "Отправить" %></p>
+<% end %>
