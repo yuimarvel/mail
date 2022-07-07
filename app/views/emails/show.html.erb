@@ -1,0 +1,9 @@
+<h1>Письмо</h1>
+
+<p>Отправитель: <%= @email.sender %></p>
+<p>Получатель: <%= @email.recipient %></p>
+<p>Тема: <%= @email.subject %></p>
+<p>Содержание: <%= @email.body %></p>
+
+<p><%= link_to "Все письма", "/all_emails" %></p>
+<p><%= link_to "Меню", "/" %></p>

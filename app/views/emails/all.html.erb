@@ -1,0 +1,7 @@
+<h1>Отправленные письма</h1>
+
+<% @emails.each do |email| %>
+  <p><%= link_to "Письмо от #{email.sender} для #{email.recipient}", email_path(email.id) %></p>
+<% end %>
+
+<p><%= link_to "Меню", "/" %></p>
